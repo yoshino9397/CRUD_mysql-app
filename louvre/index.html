@@ -19,7 +19,7 @@
   <header class="site-header">
     <div class="nav-mobile grid">
       <div class="nav-mobile__actions">
-        <div class="nav-mobile__search-trigger">
+        <div class="nav-mobile__search-trigger" id="search">
           <svg width="20" height="20">
             <!-- <use xlink:href="#search"> -->
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="search">
@@ -97,7 +97,43 @@
             </div>
           </div>
         </div>
-        <div class="bgoverlay nav-mobile__overlay"></div>
+        <div class="bgoverlay nav-mobile__overlay" id="bgoverlay"></div>
+      </div>
+    </div>
+    <div class="search-overlay">
+      <div class="search-design1"></div>
+      <div class="search-design2"></div>
+      <div class="search-overlay__close" id="search-close">
+        <svg width="18" height="18">
+          <use xlink:href="#close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17" id="close">
+              <g fill-rule="nonzero">
+                <path d="M.86827202 15.9246212L16.4246212.36827202l.70710678.70710678L1.5753788 16.63172798z"></path>
+                <path d="M16.4246212 16.63172798L.86827202 1.0753788 1.5753788.36827202 17.13172798 15.9246212z"></path>
+              </g>
+            </svg>
+          </use>
+        </svg>
+      </div>
+      <div class="search-overlay__content-wrap grid">
+        <div class="search-overlay__form">
+          <div class="ts-h1 search-overlay__headline" for="search">Search</div>
+          <form class="form" action="./index.html" method="GET" autocomplete="off">
+            <input class="form-search" type="text" placeholder="What are you searching for?" required>
+            <button type="submit" aria-label="send">
+              <svg width="20" height="20" class="ml1">
+                <use xlink:href="#arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 41" id="arrow">
+                    <g fill-rule="nonzero">
+                      <path d="M.33870968 19.8639371H39.3387097v1H.33870968z"></path>
+                      <path d="M19.38483765.82782126l.71638671-.69770353 19.75934588 20.2884637L20.10122434 40.707045l-.71638665-.69770346L38.46301074 20.4182529z"></path>
+                    </g>
+                  </svg>
+                </use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </header>
