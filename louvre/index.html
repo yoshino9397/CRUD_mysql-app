@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <!-- fontawesome -->
   <link
@@ -140,22 +143,45 @@
   <main class="site-main">
     <div class="wrapper">
       <div class="content-wrapper">
-        <div class="hero__wrap">
-          <div class="hero__content grid">
-            <h1 class="ts-h1 hero__headline">Louvre Museum</h1>
-            <div class="hero__infobox">
-              <!-- moving box -->
-              <div class="hero__infobox__effect"></div>
-              <div class="hero__infohours"></div>
+        <div class="container">
+          <div class="hero__wrap">
+            <div class="hero__content grid">
+              <h1 class="ts-h1 hero__headline">Louvre Museum</h1>
+              <div class="hero__infobox">
+                <!-- moving box -->
+                <div class="hero__infobox__effect"></div>
+                <!-- <div class="hero__infohours"></div> -->
+              </div>
+            </div>
+            <div class="hero__media">
+              <!-- <video class="canPlay" data-toggle-class="lazyloaded" poster="" preload="auto" autoplay="" loop="" muted="" playsinline="" src="https://louisiana.dk/wp-content/uploads/2021/06/Forside_Juni_Drone_720p.mp4">
+              </video> -->
+              <video class="canPlay" data-toggle-class="lazyloaded" poster="" preload="auto" autoplay="" loop="" muted="" playsinline="" src="https://api-www.louvre.fr/sites/default/files/videos/video_9_16_768/video.mp4">
+              </video>
             </div>
           </div>
+          <div class="hero__infolinks grid">
+            <ul>
+              <li>
+                <a target="" href="https://louisiana.dk/en/plan-your-visit/time-slot-covid-pass-and-a-safe-visit/" title="Plan your visit">Plan your visit</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://en.coronasmitte.dk/" title="Covid-19 info">Covid-19 info</a>
+              </li>
+              <li>
+                <a target="" href="https://louisiana.dk/en/plan-your-visit/opening-hours/" title="Tickets &amp; Opening Hours">Tickets &amp; Opening Hours</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!-- <div class="hero__infolinks --stacked">
-          <div class="grid"></div>
-        </div> -->
+        <div class="text-welcome grid">
+          <p class="text-welcome__content">WELCOME TO THE LOUVRE
+            There are plenty of good reasons to visit the Louvre! So many works of art to discover in this fabulous museum that used to be a palace! So plan your visit in advance to make the most of it. Why not pick one of our visitor trails to follow a theme-based tour? And when you need a break, where better than the museum’s restful gardens?</p>
+        </div>
       </div>
     </div>
   </main>
+  <footer>&copy;2021 Kaori Era</footer>
   <script src="./js/anime.js"></script>
 </body>
 </html>

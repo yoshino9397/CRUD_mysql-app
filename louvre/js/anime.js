@@ -50,3 +50,27 @@ function dropdown() {
   navDropSec2[0].classList.toggle('active');
   navDropSec3[0].classList.toggle('active');
 }
+
+// fun
+const heroHeadline = document.getElementsByClassName('hero__headline');
+const heroEffect = document.getElementsByClassName('hero__infobox__effect');
+const heroWrap = document.getElementsByClassName('hero__wrap');
+
+window.onscroll = () => {
+  let scroll_val = window.pageYOffset;
+  console.log(scroll_val);
+  if (scroll_val <= 200) {
+    heroHeadline[0].style.opacity = 1 - (scroll_val/200);
+    heroHeadline[0].style.transform = 'translate(0%, ' + (scroll_val/2) +'%)';
+    heroWrap[0].style.marginBottom = (100 - (scroll_val/4)) + 'px';
+  }
+  if (scroll_val <= 360) {
+    heroEffect[0].style.transform = 'translate(0%, ' + (120 - scroll_val/3) +'%)';
+  }
+}
+
+// .hero__wrap {
+//   position: relative;
+//   padding-top: var(--header-height);
+//   margin-bottom: 100px;
+// }
