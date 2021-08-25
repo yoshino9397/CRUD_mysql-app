@@ -1,8 +1,26 @@
 :root {
   --grid-columns: 12;
   --header-height: 100px;
+  --header-paddingtop: 30px;
   --hero-infobox-height: 80px;
 }
+
+body {
+  font-family: "Gotham",sans-serif;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+/* 
+div {
+  display: block;
+} */
 
 .hero__wrap {
   padding-top: var(--header-height);
@@ -13,6 +31,150 @@
   column-gap: 0;
   grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
   max-width: 100%;
+}
+
+/* header start */
+.nav-mobile {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  pointer-events: none;
+  padding-top: var(--header-paddingtop);
+}
+
+.nav-mobile__home {
+  grid-column: 3 / auto;
+  pointer-events: auto;
+  z-index: -3;
+  font-family: "Gotham",sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+}
+
+.nav-mobile__home:hover {
+  color: #00000091;
+}
+
+.nav-mobile__actions {
+  grid-column: span 3 / -2;
+  margin-left: auto;
+  display: flex;
+  /* align-items: center; */
+}
+
+.nav-mobile__search-trigger {
+  cursor: pointer;
+  z-index: -3;
+}
+
+.nav-mobile__trigger {
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  width: 18px;
+  height: 18px;
+  margin-left: 20px;
+}
+
+/* .btn-trigger */
+.btn-trigger {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  /* border: 1px solid; */
+}
+
+.btn-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  border-radius: 1px;
+  background-color: #000;
+  /* border: 1px solid; */
+}
+
+.btn-trigger, .btn-trigger span {
+  display: inline-block;
+  transition: all .5s;
+  box-sizing: border-box;
+}
+
+.btn-trigger span:nth-of-type(1) {
+  top: 0px;
+}
+
+.btn-trigger span:nth-of-type(2) {
+  top: 9px;
+}
+
+.btn-trigger span:nth-of-type(3) {
+  bottom: 0px;
+}
+
+/* #btn */
+#btn.active span:nth-of-type(1),
+#btn.active span:nth-of-type(3) {
+  width: 9px;
+}
+
+#btn.active span:nth-of-type(1) {
+  transform: translate(-1px,5px) rotate(-45deg);
+}
+
+#btn.active span:nth-of-type(3) {
+  transform: translate(-1px,-5px) rotate(45deg);
+}
+
+.nav-mobile__dropdown {
+  position: fixed;
+  width: 83%;
+  right: 0;
+  top: 0;
+  /* height: 100vh; */
+  z-index: 2;
+  background-color: #fff;
+}
+
+.nav-mobile__dropdown-top {
+  padding: 35px 40px 25px;
+  background: inherit;
+}
+
+.nav-mobile__dropdown-section-1 {
+  /* before */
+  /* opacity: 0;
+  transform: translateY(-10px);
+  transition: all 300ms ease-out;
+  transition-delay: 400ms; */
+  /* after */
+  opacity: 1;
+  transform: translate(0);
+  transition-delay: 830ms;
+}
+
+.nav-mobile__dropdown-opening-hours {
+  font-size: 0.87rem;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.nav-mobile__dropdown-section-2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  /* before */
+  /* opacity: 0;
+  transform: translateY(-10px);
+  transition: all 300ms ease-out;
+  transition-delay: 300ms; */
+  /* after */
+  opacity: 1;
+  transform: translate(0);
+  transition-delay: 860ms;
 }
 
 .hero__content {
@@ -27,6 +189,42 @@
   align-self: center;
   margin: 5vw 0 10vw;
 }
+
+.nav-mobile__trigger {
+  pointer-events: auto;
+  position: relative;
+  z-index: 3;
+  width: 18px;
+  height: 18px;
+}
+
+.nav-mobile__dropdown-main-level-1 > li > a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.nav-mobile__overlay {
+  transition-property: opacity;
+  transition-duration: 1200ms;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-delay: 0s;
+}
+
+.bgoverlay {
+  /* before */
+  /* opacity: 0; */
+  /* after */
+  opacity: 1;
+  background-color: #0000008c;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: -2;
+}
+/* header end */
 
 .ts-h1 {
   font-family: "Gotham",sans-serif;
@@ -62,7 +260,11 @@
 /* responsive */
 @media(max-width: 800px) {
   html {
-    font-size: 0.8em;
+    /* font-size: 0.8em; */
+  }
+  .nav-mobile__dropdown-main-level-1 > li > a {
+    font-size: 1.69rem;
+    line-height: 3.75rem;
   }
 }
 
