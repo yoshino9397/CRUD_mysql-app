@@ -1,0 +1,18 @@
+html {
+  height: 100%;
+}
+
+body {
+  background:white;
+}
+
+#text-button {
+  font-family: "Trattatello", "Savoye LET", sans-serif;
+  color: black;
+  font-size: 800%;
+  position: relative;
+  margin-top: 20%;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 3px;
+}

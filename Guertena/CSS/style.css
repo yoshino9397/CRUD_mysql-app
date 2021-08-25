@@ -1,4 +1,4 @@
-/* *{
+/*{
   margin: 0;
   padding: 0;
 }
@@ -95,12 +95,18 @@ header .header_right .menu_list .nav_item a {
 
 @import url(https://fonts.googleapis.com/css?family=Economica:400,700);
 
+html {
+  height: 100%;
+}
+
 body {
-  background: black;
-  font-family: 'Economica', sans-serif;
+  background: rgb(0, 0, 0);
+  font-family: "Economica", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   -webkit-backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 #circle {
@@ -112,16 +118,7 @@ body {
   left: -250px;
 }
 
-h1{
-  font-family: 'Trattatello','Savoye LET',sans-serif;
-  color:black;
-  font-size: 800%;
-  text-align:center;
-  position: relative;
-  bottom: 10%;
-  margin-top: 20%;
-  padding: 0;
-  letter-spacing: 3px;
-  
+.js-target-div {
+  height: 100%;
+  width: 100%;
 }
-
