@@ -16,3 +16,21 @@ body {
   text-align: center;
   letter-spacing: 3px;
 }
+a{
+  text-decoration: none;
+  font-family: "Trattatello", "Savoye LET", sans-serif;
+  color: rgba(95, 65, 65, 0.863);
+  font-size: 250%;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 7%;
+  left: 45%;
+  margin: 0;
+  padding: 0;
+}
+a:hover {
+  font-size: 280%;
+  color:rgba(122, 103, 103, 0.863) ;
+  transition: .2s;
+}
