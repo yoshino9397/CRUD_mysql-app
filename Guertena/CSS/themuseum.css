@@ -1,0 +1,145 @@
+html{
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0%;
+  padding: 0%;
+}
+header{
+display: flex;
+justify-content: space-evenly;
+}
+
+.menu-4 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 4% ;
+}
+.menu-4 * {
+  
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.menu-4 li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1em;
+  overflow: hidden;
+}
+.menu-4 a {
+  font-family: 'Papyrus',sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 0.3em 0;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.menu-4 a:before,
+.menu-4 a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.menu-4 a:before {
+  bottom: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #e9e95c;
+}
+.menu-4 a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: #ffffff;
+  white-space: nowrap;
+}
+.menu-4 li:hover a,
+.menu-4 .current a {
+  transform: translateY(100%);
+}
+
+h1{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 75px;
+  font-family: "Trattatello", "Savoye LET", sans-serif;
+  color: white;
+  letter-spacing: 5px;
+}
+.bgpic{
+  position: absolute;
+  top: 0%;
+  background-size:cover;
+  opacity: 0.9;
+}
+
+/*矢印*/
+
+.box1{
+  position: absolute;
+  margin-top: 35%;
+  width: 30%;
+  height: 50%;
+  background-color: #ffffff;
+  display: flex;
+}
+.arrow a{
+  font-size: 50px;
+  font-weight: bolder;
+  margin: 0;
+  padding:0;
+  color: #000000;
+  position: relative;
+  top: 13%;  
+  left: 75%;
+  text-decoration: none;
+}
+.read{
+  font-family: 'Papyrus',sans-serif;
+  position: relative;
+  top: 18%;
+  left: 60%;
+  margin: 0;
+  padding: 0;
+  font-size: 150%;
+  color: black;
+  letter-spacing: 2px;
+  text-decoration: underline;
+}
+
+.exp1{
+  position:absolute;
+  bottom: -32%;
+  left: 30%;
+  margin: 7% 0 0 0;
+  padding: 0;
+  font-size: 25px;
+  font-family: 'Papyrus',sans-serif;
+  color: black;
+}
+.pic1{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  bottom: -108%;
+  left: 30%;
+}
+a{
+  text-decoration: none;
+}
