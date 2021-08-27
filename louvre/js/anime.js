@@ -105,13 +105,13 @@ window.onscroll = () => {
 
   // console.log(scroll_val);
   // console.log(spot_p.top);
-  if (scroll_val > (spot_p.top-200)) {
+  if (scroll_val > (spot_p.top)) {
     if (flag === 0) {
       spotShadow[0].classList.toggle('active');
       flag++;
     }
   }
-  if (scroll_val > (spot_p.top-100)) {
+  if (scroll_val > (spot_p.top+200)) {
     if (flag === 1) {
       spotLazyload[0].classList.toggle('active');
       flag++;
