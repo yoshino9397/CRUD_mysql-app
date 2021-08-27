@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC');
+
+:root {
+  font-size:0.625em;
+}
+
+/*layout*/
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+/* Counters */
+
+.menuPlan ol { 
+  counter-reset:menu;
+}
+
+/*Regular menu items*/
+
+.menu-item a {
+  display:flex;
+  justify-content:flex-start; /*shrink towards text*/
+  color:currentColor;
+  text-decoration:none;
+  padding:0.3rem 0; /* avoid flickin' */
+  order:0;
+}
+
+.menu-item a::before { /* dots */
+  content:"";
+  display:block;
+  border-bottom:1px dotted black;
+  position:relative; top:-3px;
+  flex:1 1 auto;
+  margin:0 1rem;
+  order:1;
+}
+
+.menu-item a::after { 
+  counter-increment:menu;
+  content:counters(menu, ".");
+  flex:0 0 auto;
+  order:2;
+  /* transform:rotate(30deg)scale(1.2); */
+  text-decoration:underline;
+}
+/* Sub menu & items*/
+
+.sub-menu {
+  font-size:1.6rem;
+  font-weight:normal;
+}
+
+.sub-menu > li > a {
+  text-indent:0ch; /*
+    Chrome indentS the "dots" elm, i.e. it counts pseudo-elm.
+    FF and Edge indents first non pseudo-elm. 
+    Turn it off for consistency.
+  */
+  padding:0.5rem 0 0.5rem 2ch;
+  margin:0;
+}
+
+
+/*Main menu*/
+
+ .menuPlan {
+  width:22vw;
+  min-width:20ch;
+  display:flex;
+  flex-flow:column nowrap;
+  font:bold 2.4rem/1 'IM Fell English SC', serif;
+  position:relative; 
+  /* transform:rotate(-30deg); */
+}  
+
+.menuPlan::before {
+  content:"/";
+  align-self:center;
+  /* transform:rotate(30deg); */
+  margin-bottom:1rem;
+}
+
+.menuPlan::after {
+  content:"/";
+  align-self:center;
+  /* transform:rotate(30deg); */
+  margin-top:1rem;
+}
+
+/*Fx*/
+
+.menuPlan { transition:transform 0.3s; }
+/* .menuPlan:hover { transform:rotate(0); } */
+
+.menuPlan::before { transition:transform 0.5s; }
+.menuPlan:hover::before { transform:rotate(0); content:"__"; }
+.menuPlan::after { transition:transform 0.5s; }
+.menuPlan:hover::after { transform:rotate(0); content:"__"; }
+
+.menuPlan .menu-item a::after { transition:transform 0.3s }
+/* .menuPlan:hover .menu-item a::after { transform:rotate(0) } */
+
+.menuPlan:hover > ol > .menu-item { opacity:0.3; }
+
+.menu-item:hover {
+  transition:background-color 0.3s;
+  background:rgba(102, 27, 99, 0.29);
+  opacity:1 !important;
+}
+.sub-menu a {
+  font-size: 20px;
+}
+.menu-item a {
+  font-size: 30px;
+}
+
+.menu-item:hover a::after {
+  text-decoration:none;
+}
+
+.menu-item:hover > a::before {
+  transition:flex-grow 0.3s;
+  width:0; flex-grow:0;
+  transform-origin:center bottom;
+}
+
+/*Collapse*/
+
+.menuPlan:hover .sub-menu .menu-item {
+  max-height:10em;
+  transform:scaleY(1);
+}
+
+/* 内容 */
+
+.arrow{
+  position: relative;
+  top: -20%;
+  left: 10%;
+  font-size: 80px;
+  font-family: 'Luminari',sans-serif;
+  font-weight: lighter;
+  width: 20%;
+}
+.button1{
+  position: relative;
+  transition:all .3s ease-out;
+  opacity:0.3;
+  display:flex; /*追加*/
+  width: 50px; /*追加*/
+  height: 20px; /*追加*/
+  transform: scale(-1, 1);
+}
+.button1::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  width: 100%;  /*修正*/
+  height: 2px;
+  background: #666;
+}
+.button1::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 1px;  /*修正*/
+  width: 15px;
+  height: 15px;
+  border: 2px solid;
+  border-color: transparent transparent #666 #666;
+  transform: rotate(-135deg);
+}
+
+.button1:hover{
+  opacity:1;
+  width: 60px;  /*追加*/
+}
+
+.intro{
+  position: relative;
+  top: 26%;
+  left: 3%;
+  }
+.title1{
+  position: absolute;
+  top: 17%;
+  left: 47%;
+  margin: 0;
+  padding: 0;
+  font-size: 280%;
+  font-family: 'Luminari',sans-serif;
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+}
+
+h2{
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  margin: 0;
+  padding: 0;
+  font-size: 700%;
+  font-family: 'Luminari',sans-serif;
+  color: rgb(0, 0, 0);
+  letter-spacing: 3px;
+}
+.navibar{
+  position: relative;
+  top: 15%;
+  right: 3%;
+  margin: 0;
+  padding: 0;
+}
+.exp1{
+  position: relative;
+  margin: 0 0 5% 0;
+  padding: 0;
+  font-size: 22px;
+  font:bold 3.2rem/1 'IM Fell English SC', serif;
+  color: rgb(0, 0, 0);
+}
+.plan1pic{
+  position: relative;
+  margin: 0 0 7% 0;
+  padding: 0;
+}
+
+/* 検索 */
+
+/*---検索窓を開くための虫眼鏡ボタン設定 ----*/
+.open-btn{
+  position: absolute;
+  top:20%;
+  right:30%;
+  background:#fff url("https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-3/img/icon_search.svg") no-repeat 15px center;/*虫眼鏡アイコンを背景に表示*/
+  background-size: 20px 20px;
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*========= 検索窓の設定 ===============*/
+
+/*==検索窓背景のエリア*/
+
+#search-wrap{
+  position:fixed;/*固定配置にして*/
+   top: 0;
+  left: 0;
+z-index: -1;/*最背面に設定*/
+opacity: 0;/*透過を0に*/
+transition: all 0.4s;/*transitionを使ってスムースに現れる*/
+width:100%;
+height: 100vh;
+}
+
+/*ボタンクリック後、JSで#search-wrapに panelactive クラスが付与された後の見た目*/
+#search-wrap.panelactive{
+opacity: 1;/*不透明に変更*/
+ z-index: 3;/*全面に出現*/
+ background:#333;
+  /*中の要素を天地中央揃えにする設定*/
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+/*==検索窓のエリア*/
+
+#search-wrap .search-area{
+display: none;/*検索窓のエリアは、はじめ非表示*/
+}
+
+/*ボタンクリック後、JSで#search-wrapに panelactive クラスが付与された後*/
+#search-wrap.panelactive .search-area{
+display: block;/*検索窓エリアを表示*/
+width:80%;
+position: relative;
+}
+
+/*==検索フォームの設定*/
+
+#search-wrap form{
+position: relative;
+height: 66px;
+}
+
+/*==テキスト入力とボタンinput共通設定*/
+#search-wrap input{
+-webkit-appearance:none;/*SafariやChromeのデフォルトの設定を無効*/
+outline: none;
+cursor: pointer;/*カーソルを指マークに*/
+color: #fff;
+}
+
+/*テキスト入力input設定*/
+#search-wrap input[type="text"] {
+width: 100%;
+padding: 20px;
+border: none;
+border-bottom:2px solid #666;
+transition: all 0.5s;
+letter-spacing: 0.05em;
+}
+
+#search-wrap input[type="text"]:focus {
+background:#444;
+}
+
+/*ボタンinput設定*/
+#search-wrap input[type="submit"] {
+position: absolute;
+ top:0;
+right:10px;
+background:url("https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-3/img/icon_search.svg") no-repeat 15px center;/*虫眼鏡アイコンを背景に表示*/
+background-size: 25px 25px;
+width:60px;
+height: 60px;
+}
+
+/*=======　閉じるための×ボタン　========*/
+.close-btn{
+position: absolute;
+top:10px;
+right:10px;
+z-index: 2;
+cursor: pointer;
+  width: 60px;
+  height:60px;
+}
+
+.close-btn span{
+display: inline-block;
+position: absolute;
+left: 14px;
+height: 3px;
+border-radius: 2px;
+background-color: #fff;
+}
+
+/*×マーク*/
+.close-btn span:nth-of-type(1) {
+top: 21px;
+left: 16px;
+transform: translateY(6px) rotate(-135deg);
+width: 50%;
+}
+
+.close-btn span:nth-of-type(2){
+top: 32px;
+left: 16px;
+transform: translateY(-6px) rotate(135deg);
+width: 50%;
+}
+
