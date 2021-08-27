@@ -105,13 +105,13 @@ window.onscroll = () => {
 
   // console.log(scroll_val);
   // console.log(spot_p.top);
-  if (scroll_val > (spot_p.top)) {
+  if (scroll_val > (spot_p.top-200)) {
     if (flag === 0) {
       spotShadow[0].classList.toggle('active');
       flag++;
     }
   }
-  if (scroll_val > (spot_p.top+200)) {
+  if (scroll_val > (spot_p.top-100)) {
     if (flag === 1) {
       spotLazyload[0].classList.toggle('active');
       flag++;
@@ -119,6 +119,9 @@ window.onscroll = () => {
   }
 }
 
+const character = document.getElementsByClassName('character');
+const fukidashi = document.getElementsByClassName('fukidashi');
+const quote = document.getElementsByClassName('quote');
 spotLazyload[0].addEventListener('mouseover', function() {
   mouseOver();
 }, false);
@@ -129,12 +132,18 @@ spotLazyload[0].addEventListener('mouseleave', function() {
 // マウスが要素上に入った時
 function mouseOver () {
   console.log('over');
+  character[0].style.transform = "rotateX(0deg)"
+  fukidashi[0].style.transform = "rotateX(0deg)"
+  quote[0].style.transform = "rotateX(0deg)"
   // spotLazyload[0].style.opacity = '0';
 }
 
 // マウスが要素上から離れた時
 function mouseLeave () {
   console.log('leave');
+  character[0].style.transform = "rotateX(90deg)"
+  fukidashi[0].style.transform = "rotateX(90deg)"
+  quote[0].style.transform = "rotateX(90deg)"
   // spotLazyload[0].style.opacity = '1';
 }
 

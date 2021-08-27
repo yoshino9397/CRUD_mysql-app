@@ -695,16 +695,54 @@ footer {
   transform: scaleX(0) translateZ(0);
 }
 
+.character {
+  width: 45%;
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  z-index: 2;
+  /* box-shadow: 0 10px 25px 0 #000; */
+  filter: drop-shadow(10px 10px 5px #000);
+  transition: all 1s ease;
+  /* opacity: 0; */
+  transform: rotateX(90deg);
+}
+
+.fukidashi {
+  width: 30%;
+  position: absolute;
+  right: 25%;
+  top: 2%;
+  z-index: 1;
+  filter: drop-shadow(10px 10px 5px #000);
+  transition: all 1s ease;
+  transform: rotateX(90deg);
+  transition-delay: 1000ms;
+}
+
+.quote-box {
+  width: 22%;
+  position: absolute;
+  right: 28%;
+  top: 9%;
+  z-index: 1;
+}
+
+.quote {
+  z-index: 1;
+  font-size: 1.2rem;
+  font-family: 'Lobster', cursive;
+  transition: all 1s ease;
+  transform: rotateX(90deg);
+  transition-delay: 1000ms;
+}
+
 .spot-shadow.active {
   transform: scaleX(1) translateZ(0);
-  /* transform-origin: left; */
-  /* transition: transform 1000ms cubic-bezier(0.8, 0, 0.1, 1) 200ms; */
   animation: SlideIn 1.6s;
 }
 .spot-lazyload.active {
   transform: scaleX(1) translateZ(0);
-  /* transform-origin: left;
-  transition: transform 2000ms cubic-bezier(0.8, 0, 0.1, 1) 200ms; */
   animation: SlideIn 3s;
 }
 
@@ -803,5 +841,14 @@ transform: scaleY(1) translateZ(0); */
   .carousel-exhibitions__slide {
     width: 60%;
     min-width: 50%;
+  }
+
+  .quote {
+    z-index: 1;
+    font-size: 2.2rem;
+    font-family: 'Lobster', cursive;
+    transition: all 1s ease;
+    transform: rotateX(90deg);
+    transition-delay: 1000ms;
   }
 }
