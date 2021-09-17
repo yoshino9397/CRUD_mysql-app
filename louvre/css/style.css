@@ -845,7 +845,7 @@ transform: scaleY(1) translateZ(0); */
 
   .quote {
     z-index: 1;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-family: 'Lobster', cursive;
     transition: all 1s ease;
     transform: rotateX(90deg);
