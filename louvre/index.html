@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Googlefonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <!-- Googlefonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Louvre</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-mobile grid">
+      <div class="nav-mobile__actions">
+        <div class="nav-mobile__search-trigger" id="search">
+          <svg width="20" height="20">
+            <!-- <use xlink:href="#search"> -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="search">
+                <!-- <g fill-rule="nonzero"> -->
+                  <path d="M6.5 0C10.0898509 0 13 2.91014913 13 6.5c0 3.5898509-2.9101491 6.5-6.5 6.5C2.91014913 13 0 10.0898509 0 6.5 0 2.91014913 2.91014913 0 6.5 0zm0 1C3.46243388 1 1 3.46243388 1 6.5S3.46243388 12 6.5 12 12 9.53756612 12 6.5 9.53756612 1 6.5 1z"></path>
+                  <path d="M10.7928932 11.5L11.5 10.7928932 15.7071068 15 15 15.7071068z"></path>
+                <!-- </g> -->
+              </svg>
+            <!-- </use> -->
+          </svg>
+            <!-- <i class="fas fa-search fa-lg"></i> -->
+        </div>
+        <div class="nav-mobile__trigger">
+          <div class="btn-trigger" id="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="nav-mobile__dropdown">
+        <div class="nav-mobile__dropdown-design"></div>
+        <div class="nav-mobile__dropdown-top">
+          <div class="nav-mobile__dropdown-section-1">
+            <div class="nav-mobile__dropdown-opening-hours">Open today: 11:00 - 22:00</div>
+          </div>
+          <div class="nav-mobile__dropdown-section-2 nav-mobile__dropdown-main">
+            <nav role="navigation" aria-label="Main">
+              <ul class="nav-mobile__dropdown-main-level-1">
+                <li>
+                  <a href="#">Plan your visit</a>
+                </li>
+                <li>
+                  <a href="#">Exhibitions</a>
+                </li>
+                <li>
+                  <a href="#">What's on</a>
+                </li>
+                <li>
+                  <a href="#">The Museum</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="nav-mobile__dropdown-section-3 nav-mobile__dropdown-external">
+            <div class="arrow-link mb2">
+              <a class="ts-link" href="#" title="Louvre Channel">
+                <span>Louvre Channel</span>
+                <svg width="24" height="22" class="">
+                  <use xlink:href="#arrow-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 41" id="arrow-link">
+                      <g fill-rule="nonzero">
+                        <path d="M0 19.864h44v1H0z"></path>
+                        <path d="M24.385.828L25.1.13l19.76 20.289L25.1 40.707l-.716-.698 19.078-19.59z"></path>
+                      </g>
+                    </svg>
+                  </use>
+                </svg>
+              </a>
+            </div>
+            <div class="arrow-link">
+              <a class="ts-link" href="#" title="Webshop">
+                <span>Webshop</span>
+                <svg width="24" height="22" class="">
+                  <use xlink:href="#arrow-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 41" id="arrow-link">
+                      <g fill-rule="nonzero">
+                        <path d="M0 19.864h44v1H0z"></path>
+                        <path d="M24.385.828L25.1.13l19.76 20.289L25.1 40.707l-.716-.698 19.078-19.59z"></path>
+                      </g>
+                    </svg>
+                  </use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bgoverlay nav-mobile__overlay" id="bgoverlay"></div>
+      </div>
+    </div>
+    <div class="search-overlay">
+      <div class="search-design1"></div>
+      <div class="search-design2"></div>
+      <div class="search-overlay__close" id="search-close">
+        <svg width="18" height="18">
+          <use xlink:href="#close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17" id="close">
+              <g fill-rule="nonzero">
+                <path d="M.86827202 15.9246212L16.4246212.36827202l.70710678.70710678L1.5753788 16.63172798z"></path>
+                <path d="M16.4246212 16.63172798L.86827202 1.0753788 1.5753788.36827202 17.13172798 15.9246212z"></path>
+              </g>
+            </svg>
+          </use>
+        </svg>
+      </div>
+      <div class="search-overlay__content-wrap grid">
+        <div class="search-overlay__form">
+          <div class="ts-h1 search-overlay__headline" for="search">Search</div>
+          <form class="form" action="./index.html" method="GET" autocomplete="off">
+            <input class="form-search" type="text" placeholder="What are you searching for?" required>
+            <button type="submit" aria-label="send">
+              <svg width="20" height="20" class="ml1">
+                <use xlink:href="#arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 41" id="arrow">
+                    <g fill-rule="nonzero">
+                      <path d="M.33870968 19.8639371H39.3387097v1H.33870968z"></path>
+                      <path d="M19.38483765.82782126l.71638671-.69770353 19.75934588 20.2884637L20.10122434 40.707045l-.71638665-.69770346L38.46301074 20.4182529z"></path>
+                    </g>
+                  </svg>
+                </use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="site-main">
+    <div class="wrapper">
+      <div class="content-wrapper">
+        <div class="container">
+          <div class="hero__wrap">
+            <div class="hero__content grid">
+              <h1 class="ts-h1 hero__headline">Louvre Museum</h1>
+              <div class="hero__infobox">
+                <!-- moving box -->
+                <div class="hero__infobox__effect"></div>
+                <!-- <div class="hero__infohours"></div> -->
+              </div>
+            </div>
+            <div class="hero__media">
+              <!-- <video class="canPlay" data-toggle-class="lazyloaded" poster="" preload="auto" autoplay="" loop="" muted="" playsinline="" src="https://louisiana.dk/wp-content/uploads/2021/06/Forside_Juni_Drone_720p.mp4">
+              </video> -->
+              <video class="canPlay" data-toggle-class="lazyloaded" poster="" preload="auto" autoplay="" loop="" muted="" playsinline="" src="https://api-www.louvre.fr/sites/default/files/videos/video_9_16_768/video.mp4">
+              </video>
+            </div>
+          </div>
+          <div class="hero__infolinks grid">
+            <ul>
+              <li>
+                <a target="" href="https://louisiana.dk/en/plan-your-visit/time-slot-covid-pass-and-a-safe-visit/" title="Plan your visit">Plan your visit</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://en.coronasmitte.dk/" title="Covid-19 info">Covid-19 info</a>
+              </li>
+              <li>
+                <a target="" href="https://louisiana.dk/en/plan-your-visit/opening-hours/" title="Tickets &amp; Opening Hours">Tickets &amp; Opening Hours</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-welcome grid">
+          <p class="text-welcome__content">WELCOME TO THE LOUVRE</p>
+          <p class="text-welcome__content">There are plenty of good reasons to visit the Louvre! So many works of art to discover in this fabulous museum that used to be a palace! So plan your visit in advance to make the most of it. Why not pick one of our visitor trails to follow a theme-based tour? And when you need a break, where better than the museum’s restful gardens?</p>
+        </div>
+        <div class="exhibitions grid container">
+          <h2 class="ts-h2 exhibitions__headline">Current exhibitions</h2>
+          <div class="exhibitions__slides">
+            <div class="swiper">
+              <div class="swipe-container">
+                <div id="swipe-wrapper" class="swipe-wrapper" draggable="true">
+                  <div class="carousel-exhibitions__slide">
+                    <div class="image">
+                      <img class="lazyload" alt="picture" srcset="https://louisiana.dk/wp-content/uploads/2020/10/46_KMA2002_srgb-960x1378.jpg">
+                    </div>
+                    <h3 class="ts-h3">Mamma Andersson</h3>
+                    <p class="ts-subtext">17.6.21 - 10.10.21</p>
+                    <p class="carousel-exhibitions__slide-excerpt">Mamma Andersson (b. 1962) ranks as one of the most important painters of her generation. The exhibition is the first major presentation of Mamma Andersson’s work in Denmark.</p>
+                    <a class="ts-link" target="_blank" href="https://louisiana.dk/en/exhibition/mamma-andersson-eng/">About the Exhibition</a>
+                  </div>
+                  <div class="carousel-exhibitions__slide">
+                    <div class="image">
+                      <img class="lazyload" alt="picture" srcset="https://louisiana.dk/wp-content/uploads/2020/06/mor_magrtitte-960x1240.jpg">
+                    </div>
+                    <h3 class="ts-h3">Mother!</h3>
+                    <p class="ts-subtext">21.4.21 - 29.8.21</p>
+                    <p class="carousel-exhibitions__slide-excerpt">Present or absent, supportive or domineering, warm or diabolical – everyone has a Mother! Louisiana opens its 2021 season with this large-scale exhibition revolving around Motherhood.</p>
+                    <a target="_blank" href="https://louisiana.dk/en/exhibition/mor/" class="ts-link">About the Exhibition</a>
+                  </div>
+                  <div class="carousel-exhibitions__slide">
+                    <div class="image">
+                      <img class="lazyload" alt="picture" srcset="https://louisiana.dk/wp-content/uploads/2020/10/3628_5-Pia-Arke-960x526.jpg">
+                    </div>
+                    <h3 class="ts-h3">Pia Arke</h3>
+                    <p class="ts-subtext">15.7.21 - 2.1.22</p>
+                    <p class="carousel-exhibitions__slide-excerpt">Pia Arke used her dual ethnicity in Greenland and Denmark as a point of departure for her powerful and poetic work, that delves into Danish colonial history and her own personal journey.</p>
+                    <a target="_blank" href="https://louisiana.dk/en/exhibition/pia-arke/" class="ts-link">About the Exhibition</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spot-large--right-aligned container">
+          <div class="spot-large__media">
+            <img class="spot-lazyload" alt="picture" src="./images/louvre.jpeg">
+            <div class="spot-shadow"></div>
+            <img class="fukidashi" src="./images/fukidashi.png" alt="fukidashi">
+            <div class="quote-box">
+              <p class="quote">Hello!</br>This is the Louvre Pyramid!</p>
+            </div>
+            <img class="character" src="./images/lisa.png" alt="character">
+          </div>
+        </div>
+        <div class="grid">
+          <h2 class="spot-large__headline ts-h2">About The Louvre Pyramid</h2>
+          <p class="text-intro__content">The Louvre Pyramid (Pyramide du Louvre) is a large glass and metal pyramid designed by Chinese-American architect I. M. Pei, surrounded by three smaller pyramids, in the main courtyard (Cour Napoléon) of the Louvre Palace in Paris.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>&copy;2021 Kaori Era</footer>
+  <script src="./js/anime.js"></script>
+</body>
+</html>
