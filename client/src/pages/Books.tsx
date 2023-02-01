@@ -1,17 +1,18 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-interface Props {
-  id: number;
-  title: string;
-  desc: string;
-  price: number;
-  cover: string;
-}
+import { Book } from "../typing";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
+  const handleDelete = async (id: number) => {
+    try {
+      await axios.delete(`http://localhost:8800/books/${id}`);
+      window.location.reload();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
     const fetchAllBooks = async () => {
@@ -24,28 +25,32 @@ const Books = () => {
     };
     fetchAllBooks();
   }, []);
-  console.log(books);
+
   return (
     <div>
       <h1>Yoshino's Book Shop</h1>
-      {books.map((book: Props) => (
-        <div key={book.id} className="book">
-          {book.cover && <img src={book.cover} alt="" />}
-          <h2>{book.title}</h2>
-          <p>{book.desc}</p>
-          <span>${book.price}</span>
-          {/* <button className="delete" onClick={() => handleDelete(book.id)}>Delete</button> */}
-          <button className="update">
-            <Link
-              to={`/update/${book.id}`}
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
-              Update
-            </Link>
-          </button>
-        </div>
-      ))}
-      <button>
+      <div className="books">
+        {books.map((book: Book) => (
+          <div key={book.id} className="book">
+            {book.cover && <img src={book.cover} alt="" />}
+            <h2>{book.title}</h2>
+            <p>{book.desc}</p>
+            <span>${book.price}</span>
+            <button className="delete" onClick={() => handleDelete(book.id)}>
+              Delete
+            </button>
+            <button className="update">
+              <Link
+                to={`/update/${book.id}`}
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                Update
+              </Link>
+            </button>
+          </div>
+        ))}
+      </div>
+      <button className="addHome">
         <Link to="/add" style={{ color: "inherit", textDecoration: "none" }}>
           Add new book
         </Link>
